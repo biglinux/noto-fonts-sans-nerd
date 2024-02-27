@@ -1,0 +1,20 @@
+# Modified from https://aur.archlinux.org/packages/noto-fonts-lite
+
+pkgname=noto-fonts-sans-nerd
+pkgver=$(date +%Y_%m_%d)
+pkgrel=$(date +%H%M)
+pkgdesc='Noto Sans Nerd Propo Font)'
+arch=(any)
+url='https://github.com/ryanoasis/nerd-fonts'
+license=(custom:SIL)
+optdepends=('noto-fonts-cjk: CJK characters' 'noto-fonts-emoji: Emoji characters'
+            'noto-fonts-extra: additional variants (condensed, semi-bold, extra-light)')
+_url="https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/Noto/Sans/NotoSansNerdFontPropo"
+source=("${_url}-"{ExtraBold,ExtraBoldItalic,Italic,Light,LightItalic,Medium,MediumItalic,Regular,SemiBoldItalic,SemiBold}.ttf
+        "noto-sans-nerd-license::https://github.com/ryanoasis/nerd-fonts/raw/master/LICENSE")
+md5sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
+
+package() {
+  install -Dm644 Noto*.tt[fc] -t "$pkgdir"/usr/share/fonts/noto-sans-nerd
+  install -Dm644 noto-sans-nerd-license "$pkgdir"/usr/share/licenses/noto-sans-nerd/LICENSE
+}
