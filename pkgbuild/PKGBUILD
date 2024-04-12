@@ -11,7 +11,7 @@ optdepends=('noto-fonts-cjk: CJK characters' 'noto-fonts-emoji: Emoji characters
             'noto-fonts-extra: additional variants (condensed, semi-bold, extra-light)')
 _url="https://github.com/biglinux/noto-fonts-sans-nerd/raw/main"
 source=("${_url}/patched/NotoSansNerdFont-"{Bold,BoldItalic,Italic,Light,LightItalic,Medium,MediumItalic,Regular}.ttf
-        "${_url}/patched/NotoSansMNerdFontMono-"{Bold Light Medium Regular SemiBold}.ttf
+        "${_url}/patched/NotoSansMNerdFontMono-"{Bold,Light,Medium,Regular,SemiBold}.ttf
         "noto-sans-nerd-license::${_url}/patched/LICENSE")
 md5sums=('SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP' 'SKIP')
 
